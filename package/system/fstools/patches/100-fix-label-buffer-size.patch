@@ -1,0 +1,11 @@
+--- a/libblkid-tiny/libblkid-tiny.h	2018-01-20 18:19:11.873397503 +0100
++++ b/libblkid-tiny/libblkid-tiny.h	2018-01-20 18:19:31.029137504 +0100
+@@ -56,7 +56,7 @@
+ 	int	err;
+ 	char	dev[32];
+ 	char	uuid[64];
+-	char	label[64];
++	char	label[264];
+ 	char	version[64];
+ };
+ 
