@@ -11,7 +11,7 @@ include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/image.mk
 
 KERNEL_LOADADDR:=0x8000
-TARGET_DEVICES = linksys-audi linksys-viper dockstar goflexnet goflexhome iconnect pogo_e02 ib62x0
+TARGET_DEVICES = linksys-audi linksys-viper dockstar goflexnet goflexhome iconnect ix2 pogo_e02 ib62x0
 
 UBI_OPTS := -m 2048 -p 128KiB -s 512
 UBIFS_OPTS := -m 2048 -e 126KiB -c 4096
@@ -50,6 +50,11 @@ define Device/goflexhome
 $(Device/dockstar)
   DEVICE_TITLE := Seagate GoFlexHome
   DEVICE_DTS := kirkwood-goflexhome
+endef
+
+define Device/ix2
+  DEVICE_TITLE := Iomega StorCenter ix2-200
+  DEVICE_DTS := kirkwood-iomega_ix2_200
 endef
 
 define Device/linksys-audi
